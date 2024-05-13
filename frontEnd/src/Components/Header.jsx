@@ -5,7 +5,7 @@ import "./CSSfiles/style.css"
 
 function Header(){
     return <header className="head">
-                    <h1 ><NotesIcon/> Keeper</h1>
+                    <h1 ><NotesIcon/> My Notes </h1>
                 </header>
 };
 
