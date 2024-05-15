@@ -28,7 +28,7 @@ function CreateArea(props) {
         const {value,name}=event.target;
         setText(prevValue => {
             return {
-                ...prevValue, //we are useing the spread operator here to minimize the code instead of having long if/else statements
+                ...prevValue,
                 [name] : value 
             }
             
