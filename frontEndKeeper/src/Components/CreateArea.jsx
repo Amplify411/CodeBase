@@ -36,7 +36,7 @@ function CreateArea(props) {
         
         <form className="create-note">
         
-                {zoomy &&  (<input onChange={handleChange} name="title" placeholder="Title" value={text.title} />)}
+                {zoomy &&  (<input onChange={handleChange} name="title" placeholder={props.nodeStr} value={text.title} />)}
                 <textarea onChange={handleChange} onClick={handleZoom} name="content" placeholder="Take a note..." value={text.content} rows={zoomy?3:1} />
                 <Zoom in={zoomy} >
                 <Fab onClick={handleSubmit}><AddIcon /></Fab>
