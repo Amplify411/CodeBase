@@ -1,15 +1,13 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import Note from "./Note";
 import CreateArea from "./CreateArea";
-import axios from "axios"
 
 function App() {
 
   const [notes,setNotes]=useState([]);
-  const [title,setTitle]=useState("Dummy Title");
-
+  
   function handleAdd(text){
     setNotes(prevNotes=>{
             return [...prevNotes,text]})
@@ -24,14 +22,8 @@ function App() {
       })
     } )
   }
-  async function getData(){
-    const urlName="http://localhost:3000/"
-    const response= await axios.get(urlName)
-    const result = response.data;
-    const strResult=JSON.stringify(result);
-    setTitle(strResult);
- }
-  getData();
+  
+ 
   return (
     <div>
       <Header />
@@ -43,7 +35,6 @@ function App() {
           id={index}
           title={items.title} 
           content={items.content}
-          nodeStr={title}
           onDelete={deleteItem}/>)
       })}
       <Footer />

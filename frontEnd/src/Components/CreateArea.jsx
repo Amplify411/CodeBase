@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import AddIcon from "@mui/icons-material/Add";
 import Fab from '@mui/material/Fab';
 import Zoom from '@mui/material/Zoom';
@@ -8,6 +8,19 @@ function CreateArea(props) {
         title:"",
         content:""
     });
+    const [title,setTitle]=useState("Title");
+  
+     useEffect( ()=>{
+
+        async function getData() {
+            const urlName="http://localhost:3000/"
+            const response = await fetch(urlName)
+            const result = await response.json();
+            const strResult=result.message;
+            setTitle(strResult);
+            }
+        getData();
+     },[]);
     
     const [zoomy,setZoomy]=useState(false);
 
@@ -36,7 +49,7 @@ function CreateArea(props) {
         
         <form className="create-note">
         
-                {zoomy &&  (<input onChange={handleChange} name="title" placeholder={props.nodeStr} value={text.title} />)}
+                {zoomy &&  (<input onChange={handleChange} name="title" placeholder={title} value={text.title} />)}
                 <textarea onChange={handleChange} onClick={handleZoom} name="content" placeholder="Take a note..." value={text.content} rows={zoomy?3:1} />
                 <Zoom in={zoomy} >
                 <Fab onClick={handleSubmit}><AddIcon /></Fab>
