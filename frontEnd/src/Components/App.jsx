@@ -24,11 +24,11 @@ function App() {
       onAdd={handleAdd}/>
       {notes.map((items,index)=>{
       return (<Note 
-                 key={index} 
-                 id={index}
-                 title={items.title} 
-                 content={items.content}
-                 onDelete={deleteItem}/>)
+      key={index} 
+      id={index}
+      title={items.title} 
+      content={items.content}
+      onDelete={deleteItem}/>)
       })}
       <Footer />
     </div>
