@@ -6,6 +6,7 @@ import "./CSSfiles/style.css"
 function Header(){
     return <header className="head">
                     <h1 ><NotesIcon/> My Notes </h1>
+                    <button class="top-left-button">Click Me</button>
                 </header>
 };
 
