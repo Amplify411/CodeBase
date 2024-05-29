@@ -22,8 +22,8 @@ function App() {
       <Header />
       <CreateArea 
       onAdd={handleAdd}/>
-      {notes.map((items,index)=>{
-      return (<Note 
+      {notes.map((items,index)=>{return (
+      <Note 
       key={index} 
       id={index}
       title={items.title} 

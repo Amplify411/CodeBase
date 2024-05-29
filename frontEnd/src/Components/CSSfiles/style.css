@@ -7,7 +7,7 @@ html {
   font-family: "Montserrat", sans-serif;
 }
 body {
-  background: #eee;
+  background: #5f5b5b;
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
   padding: 0 16px;
 }
@@ -16,7 +16,7 @@ body {
   position: absolute;
   top: 0px; /* Adjust the top position as needed */
   right: 0px; /* Adjust the left position as needed */
-  padding: 28px 25px;
+  padding: 23px 25px;
   font-size: 16px;
   cursor: pointer;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
