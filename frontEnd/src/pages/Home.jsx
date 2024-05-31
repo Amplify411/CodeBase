@@ -1,10 +1,12 @@
 import React,{useState} from "react";
-import Header from "./Header";
-import Footer from "./Footer";
-import Note from "./Note";
-import CreateArea from "./CreateArea";
+import {Link} from "react-router-dom";
+import Header from "../Components/Header";
+import Footer from "../Components/Footer";
+import Note from "../Components/Note";
+import CreateArea from "../Components/CreateArea";
+import LoginIcon from '@mui/icons-material/Login';
 
-function App() {
+function Home() {
   const [notes,setNotes]=useState([]);
   function handleAdd(text){
     setNotes(prevNotes=>{
@@ -20,6 +22,7 @@ function App() {
   return (
     <div>
       <Header />
+      <button class="top-left-button" type="submit" ><Link to="/signup"><LoginIcon /></Link></button>
       <CreateArea 
       onAdd={handleAdd}/>
       {notes.map((items,index)=>{return (
@@ -35,4 +38,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

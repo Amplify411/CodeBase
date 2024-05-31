@@ -1,5 +1,5 @@
 import React from 'react'
-import "./CSSfiles/style.css"
+import "../CSSfiles/style.css"
 
 const currentDate = new Date();
 const currentYear = currentDate.getFullYear();

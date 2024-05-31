@@ -1,0 +1,37 @@
+.signUp {
+  margin: 10% auto;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.signUp h3 {
+  color: #50a3a2;
+  font-size: 30px;
+  font-weight: 300;
+}
+.sign_ip {
+  border: 1px solid rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
+  width: 250px;
+  border-radius: 3px;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 10px 15px;
+  margin: 0 auto 10px auto;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: rgba(63, 59, 59, 0.738);
+  font-weight: 300;
+}
+
+.sign_button {
+  appearance: none;
+  outline: 0;
+  background-color: white;
+  border: 0;
+  padding: 10px 15px;
+  color: #50a3a2;
+  border-radius: 3px;
+  width: 250px;
+  font-size: 18px;
+}
